@@ -1,7 +1,7 @@
-#Instructor
+# Instructor
 Show schedule for instructors
 
-##Tools used for development
+## Tools used for development
 
 Eclipse 2020-12
 Visual studio code
@@ -16,7 +16,7 @@ This application contains a part in cloud, backend source code and database and 
 jar deployment was in Amazon Elasticbeanstalk.
 
 
-##Front component installation manual locally
+## Front component installation manual locally
 
 -Install node 
 https://nodejs.org/en/download/
