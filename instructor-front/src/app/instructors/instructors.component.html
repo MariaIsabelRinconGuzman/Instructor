@@ -1,0 +1,9 @@
+<h2>Instructors Schedule</h2>
+<ul class="instructors">
+    <li *ngFor="let instructor of instructors"
+    [class.selected]="instructor === selectedInstructor"
+    (click)="onSelect(instructor)">
+    <span class="badge">{{instructor.idInstructor}}</span> {{instructor.name}} {{instructor.surname}}
+  </li>
+</ul>
+<app-schedule [instructorD]="selectedInstructor"></app-schedule>

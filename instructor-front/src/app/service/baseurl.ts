@@ -1,0 +1,1 @@
+export const baseURL = 'http://instructor-env.eba-3ei3mbca.us-east-2.elasticbeanstalk.com/';

@@ -1,0 +1,53 @@
+INSERT INTO `instructor`.`instructor` (`id_instructor`, `birth`, `name`, `surname`) VALUES ('0', '1990-02-05', 'Juan', 'Perez');
+INSERT INTO `instructor`.`instructor` (`id_instructor`, `birth`, `name`, `surname`) VALUES ('1', '1985-10-05', 'Fernando', 'Cardona');
+INSERT INTO `instructor`.`instructor` (`id_instructor`, `birth`, `name`, `surname`) VALUES ('2', '1995-12-25', 'Ana', 'Lopez');
+INSERT INTO `instructor`.`instructor` (`id_instructor`, `birth`, `name`, `surname`) VALUES ('3', '1992-03-02', 'Oscar', 'Pelaez');
+INSERT INTO `instructor`.`instructor` (`id_instructor`, `birth`, `name`, `surname`) VALUES ('4', '1987-11-30', 'Kelly', 'Acevedo');
+
+
+INSERT INTO `instructor`.`event` (`id_event`,`description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('0', 'Week off', '7', '2021-06-30', '2021-06-23', 'V', '0');
+
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('1', 'Week off', '7', '2021-06-07', '2021-06-01', 'V', '1');
+
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('2', 'Week off', '7', '2021-06-13', '2021-06-07', 'V', '2');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('3', 'Week off', '7', '2021-06-19', '2021-06-13', 'V', '3');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('4', 'Week off', '7', '2021-06-25', '2021-06-19', 'V', '4');
+
+---------------------
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('5', 'Seminar', '7', '2021-06-07', '2021-06-01', 'S', '0');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('6', 'Seminar', '7', '2021-06-14', '2021-06-08', 'S', '0');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('7', 'Seminar', '7', '2021-06-14', '2021-06-08', 'S', '1');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('8', 'Seminar', '7', '2021-06-29', '2021-06-22', 'S', '1');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('9', 'Seminar', '7', '2021-06-06', '2021-06-01', 'S', '2');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('10', 'Seminar', '7', '2021-06-20', '2021-06-14', 'S', '2');
+
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('11', 'Seminar', '7', '2021-06-26', '2021-06-20', 'S', '3');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('12', 'Seminar', '7', '2021-06-06', '2021-06-12', 'S', '3');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('13', 'Seminar', '7', '2021-06-12', '2021-06-18', 'S', '4');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('14', 'Seminar', '7', '2021-06-05', '2021-05-30', 'S', '4');
+
+
+-------------------
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('15', 'Project week', '7', '2021-06-21', '2021-06-15', 'P', '0');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('16', 'Project week', '7', '2021-06-21', '2021-06-15', 'P', '1');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('17', 'Project week', '7', '2021-06-27', '2021-06-21', 'P', '2');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('18', 'Project week', '7', '2021-06-05', '2021-05-30', 'P', '3');
+
+INSERT INTO `instructor`.`event` (`id_event`, `description`, `duration_days`, `end`, `start`, `type`, `id_instructor`) VALUES ('19', 'Project week', '7', '2021-06-12', '2021-06-06', 'P', '4');

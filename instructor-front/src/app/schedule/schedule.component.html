@@ -1,0 +1,124 @@
+<div *ngIf="instructorD">
+  <h2>{{instructorD.name}} {{instructorD.surname}}</h2>
+  <div><span>birthday: </span>{{instructorD.birth}}</div>
+</div>
+<section [formGroup]="form">
+  <ng-template #insert let-c="close" let-d="dismiss" class="template">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title"><strong>Create event</strong></h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group col-8">
+        <span>Type</span>
+        <input type="text" class="form-control" formControlName="type" name="type" id="type">
+      </div>
+      <div class="form-group col-8">
+        <span>Description</span>
+        <input type="text" class="form-control" formControlName="description" name="description" id="description">
+      </div>
+      <div class="form-group col-8">
+        <span>Start date</span>
+        <input type="datetime-local" class="form-control" formControlName="start" name="start" id="start">
+      </div>
+      <div class="form-group col-8">
+        <span>End date</span>
+        <input type="datetime-local" class="form-control" formControlName="end" name="end" id="end">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" id="buttonSave"
+        (click)="c('Save click'); createEvent()">Save</button>
+      <button type="button" class="btn btn-outline-danger" id="buttonCancel" (click)="d('Cross click')">Cancel</button>
+    </div>
+  </ng-template>
+</section>
+<section [formGroup]="form">
+  <ng-template #update let-c="close" let-d="dismiss" class="template">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title"><strong>Edit event</strong></h4>
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-group col-8">
+        <span>Type</span>
+        <input type="text" class="form-control" formControlName="type" name="type" id="type" value="selectedEvent.type">
+      </div>
+      <div class="form-group col-8">
+        <span>Description</span>
+        <input type="text" class="form-control" formControlName="description" name="description" id="description">
+      </div>
+      <div class="form-group col-8">
+        <span>Start date</span>
+        <input type="datetime-local" class="form-control" formControlName="start" name="start" id="start">
+      </div>
+      <div class="form-group col-8">
+        <span>End date</span>
+        <input type="datetime-local" class="form-control" formControlName="end" name="end" id="end">
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" id="buttonSave"
+        (click)="c('Save click'); editEvent()">Save</button>
+      <button type="button" class="btn btn-outline-danger" id="buttonCancel" (click)="d('Cross click')">Cancel</button>
+    </div>
+  </ng-template>
+  <section [formGroup]="form">
+    <ng-template #delete let-c="close" let-d="dismiss" class="template">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title"><strong>Delete event</strong></h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group col-8">
+          <span>Do you want to delete the event?</span>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" id="buttonSave"
+          (click)="c('Save click'); deleteEvent()">Yes</button>
+        <button type="button" class="btn btn-outline-danger" id="buttonCancel" (click)="d('Cross click')">No</button>
+      </div>
+    </ng-template>
+  </section>
+</section>
+<section class="contenido" *ngIf="instructorD">
+  <h3>Events</h3>
+  <div class="form-group">
+    <button type="button" id="buttonCreate" class="btn btn-outline-dark" (click)="open(insert)">Create event</button>
+  </div>
+</section>
+<section>
+  <div class="contenido">
+    <table class="table table-striped" *ngIf="(events && events.length)">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Start date</th>
+          <th>End date</th>
+          <th>Duration days</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let event of events" [class.selected]="event === selectedEvent">
+          <td>{{event.type}}</td>
+          <td>{{event.description}}</td>
+          <td>{{event.start}}</td>
+          <td>{{event.end}}</td>
+          <td>{{event.durationDays}}</td>
+          <td><button type="button" id="buttonEdit" class="btn btn-outline-dark" (click)="open(update);  onSelect(event)">Edit event</button></td>
+          <td><button type="button" id="buttonDelete" class="btn btn-outline-dark" (click)="open(delete);  onSelect(event)">Delete event</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
