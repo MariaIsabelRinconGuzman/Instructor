@@ -12,7 +12,7 @@ Java 8
 Amazon Elasticbeanstalk console.aws.amazon.com/elasticbeanstalk/
 Spring Boot 2.5.1
 
-This application contains a part in cloud, backend source code and database and a part in local, front source code, por this part was used Angular 11, for backend was used Java 8 and Spring Boot, with database in Amazon RDS, 
+This application contains a part in cloud, backend source code and database and a part in local, front source code, for this part was used Angular 11, for backend was used Java 8 and Spring Boot, with database in Amazon RDS, 
 jar deployment was in Amazon Elasticbeanstalk.
 
 
